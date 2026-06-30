@@ -12,15 +12,15 @@ interface AppConfig {
   rateLimit: { windowMs: number; max: number };
 }
 
-// const config: AppConfig = {
-//   port: process.env.PORT || 3000,
-//   nodeEnv: process.env.NODE_ENV || "development",
-//   corsOrigins: (process.env.CORS_ORIGINS || "http://localhost:3000").split(","),
-//   rateLimit: {
-//     windowMs: 15 * 60 * 1000,
-//     max: process.env.RATE_LIMIT_MAX || 100,
-//   },
-// };
+const config: AppConfig = {
+  port: process.env.PORT || 3000,
+  nodeEnv: process.env.NODE_ENV || "development",
+  corsOrigins: (process.env.CORS_ORIGINS || "http://localhost:3000").split(","),
+  rateLimit: {
+    windowMs: 15 * 60 * 1000,
+    max: process.env.RATE_LIMIT_MAX || 100,
+  },
+};
 
 
 
@@ -163,11 +163,11 @@ app.get("/", (_req: Request, res: Response) => {
 });
 
 
-app.get("/", (_req: Request, res: Response) => {
-  return res.staus(200).json({
-    message:"Server is up and running"
-  });
-});
+// app.get("/", (_req: Request, res: Response) => {
+//   return res.staus(200).json({
+//     message:"Server is up and running"
+//   });
+// });
 
 
 app.use(errorHandler);

@@ -10,7 +10,6 @@ interface AppConfig {
   nodeEnv: string;
   corsOrigins: string[];
   rateLimit: { windowMs: number; max: number };
-  randomError: false
 }
 
 const config: AppConfig = {

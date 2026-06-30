@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "index.ts": { "runtime": "@vercel/node@3" }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.ts" }
+  ]
+}
